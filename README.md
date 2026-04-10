@@ -65,7 +65,6 @@ Rename the provided template:
 - `GEMINI.md.example` ➡️ `GEMINI.md` (if using Antigravity)
 
 Place it in your project's workspace folder (or globally in your system config).
-*Instruct the Manager to monitor for that `-done` filename change!*
 
 ### 5. Telegram Setup (Optional Bonus)
 1. Open VSCode Settings (`Ctrl + ,`).
