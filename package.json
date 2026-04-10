@@ -3,6 +3,11 @@
   "displayName": "Roo Code Bridge",
   "description": "HTTP bridge to control Roo Code from external scripts",
   "version": "0.1.0",
+  "publisher": "phuongncn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phuongncn/roocode-bridge.git"
+  },
   "engines": { "vscode": "^1.80.0" },
   "activationEvents": ["onStartupFinished"],
   "main": "./extension.js",
