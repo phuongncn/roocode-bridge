@@ -3,7 +3,7 @@
 **Transform Your AI Coding Experience: Claude/Antigravity as the Brains, Roo Code as the Brawn, and Telegram as a Bonus Remote Control!**
 
 ## 🛑 The Pain
-- **High API Fees:** Running complex coding tasks through premium models like Claude 3.5 Sonnet or GPT-4o continuously can burn a hole in your pocket.
+- **High API Fees:** Running complex coding tasks through premium models like Claude Sonnet or GPT continuously can burn a hole in your pocket.
 - **Micro-Management:** Waiting for the AI, reading through every file it changes, and telling it what to do next is exhausting.
 - **Tethered to the Desk:** You have to sit at your computer to monitor the AI's progress.
 
