@@ -22,7 +22,10 @@ By offloading the heavy lifting (writing lines of code, replacing files) to Roo 
 1. You prompt **Claude Code** or **Antigravity** with a task.
 2. The Manager writes a detailed plan into the `.plan/` folder and uses the MCP Server to send the task to **Roo Code**.
 3. **Roo Code** starts working autonomously.
-4. **Signaling Completion (Highly Recommended):** Once Roo is done, it signalizes completion by renaming the plan file (e.g., adding `-done` to the filename). *(Note: The MCP `report_done` tool sometimes works and sometimes doesn't, so we highly recommend having your manager rely on the change filename method!)* 
+4. **Signaling Completion (Highly Recommended):** Once Roo is done, it signals completion by renaming the plan file (e.g., `fix-01-ui.md` ➡️ `fix-01-ui-done.md`).
+    
+    > [!TIP]
+    > While an MCP `report_done` tool exists, AI agents often forget to call it or the tool call might fail if the agent crashes. **Relying on the `-done` filename change is the most robust way** to ensure your Manager knows the work is finished.
 5. The Manager reviews the code. If there are bugs, it updates the plan and sends Roo back to work. If it's perfect, the loop finishes.
 6. **Telegram Integration:** As a bonus, you can chat with your Telegram bot to control Roo directly. *(Note: Currently, Telegram only sends prompts to Roo, not to Claude/Antigravity. Hopefully, someone from the community can help build that out!)*
 
@@ -51,7 +54,10 @@ You need to connect Roo Code to the Bridge. Go to **Roo Settings > MCP Tab > Edi
 ```
 
 ### 3. Setup the Polling Script
-Place `poll-roo-bridge.ps1` somewhere accessible in your system. This script helps the manager check on Roo's progress if you don't solely rely on the file-rename method.
+Place `poll-roo-bridge.ps1` somewhere accessible in your system. This script helps the manager check on Roo's progress.
+
+> [!IMPORTANT]
+> After placing the script, you **must update the path** in your `CLAUDE.md` or `GEMINI.md` file (Step 2 — Poll status section) to match the location on your machine.
 
 ### 4. Setup The Manager (Claude / Antigravity)
 Rename the provided template:
