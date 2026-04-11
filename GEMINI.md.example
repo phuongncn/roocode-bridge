@@ -33,14 +33,19 @@ Estimate expected duration:
 - **Medium**: 3-5 files with logic changes → 500s
 - **Complex**: 6+ files, refactor, architecture changes → 1200s
 
-Run the poll script in **one single tool call**:
-```bash 
-powershell -ExecutionPolicy Bypass -File "C:\Users\ADMIN\.claude\poll-roo-bridge.ps1" -ExpectedSeconds 1500
+Run the poll script in **one single tool call** (choose based on your OS):
+
+```bash
+# Windows
+powershell -ExecutionPolicy Bypass -File "C:\path\to\poll-roo-bridge.ps1" -ExpectedSeconds 1500
+
+# Mac / Linux
+bash "/path/to/poll-roo-bridge.sh" 1500 10
 ```
 
-Adjust `-ExpectedSeconds` per estimate above. The script calculates interval automatically.
+Adjust the seconds (1500 in examples) per estimate above. The script calculates interval automatically.
 
-**CRITICAL: MUST use this PowerShell script — do NOT write custom bash/shell polling loops.**
+**CRITICAL: MUST use the provided polling script — do NOT write custom bash loops.**
 
 Status values:
 - `"idle"` / `"running"` → keep waiting

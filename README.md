@@ -54,10 +54,14 @@ You need to connect Roo Code to the Bridge. Go to **Roo Settings > MCP Tab > Edi
 ```
 
 ### 3. Setup the Polling Script
-Place `poll-roo-bridge.ps1` somewhere accessible in your system. This script helps the manager check on Roo's progress.
+This script helps the manager check on Roo's progress. Choose the version for your OS:
+- **Windows:** Use `poll-roo-bridge.ps1`.
+- **Mac / Linux:** Use `poll-roo-bridge.sh`.
+
+Place the script somewhere accessible in your system.
 
 > [!IMPORTANT]
-> After placing the script, you **must update the path** in your `CLAUDE.md` or `GEMINI.md` file (Step 2 — Poll status section) to match the location on your machine.
+> After placing the script, you **must update the path** in your `CLAUDE.md` or `GEMINI.md` file (Step 2 — Poll status section) to match the location and filename on your machine.
 
 ### 4. Setup The Manager (Claude / Antigravity)
 Rename the provided template:
